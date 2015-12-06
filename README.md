@@ -18,7 +18,7 @@ Step 2. Point bosh director to the cloned deployment manifest file
     bosh deployment manifest.yml
     bosh status
 
-Step 3. Download and save locally a distribution of golang. For example to /tmp/golang-blobs/go1.5.2.linux-amd64.tar.gz file and add this blob to bosh
+Step 3. Download and save locally a distribution of golang (from here [https://storage.googleapis.com/golang/go1.5.2.linux-amd64.tar.gz]). For example to /tmp/golang-blobs/go1.5.2.linux-amd64.tar.gz file and add this blob to bosh
 
     bosh add blob /tmp/golang-blobs/go1.5.2.linux-amd64.tar.gz golang
     bosh blobs
