@@ -2,6 +2,6 @@
 
 bosh deployment manifest.yml 
 bosh add blob /tmp/golang-blobs/go1.5.2.linux-amd64.tar.gz golang
-bosh create release —force
+bosh create release --force
 bosh upload release
 bosh deploy
