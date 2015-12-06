@@ -1,4 +1,4 @@
-This assumes that you have bosh Director deployed locally and it is managing a local bosh installation. This instructions were written abd tested for Mac OS X.
+This assumes that you have bosh Director deployed locally and it is managing a local bosh installation. This instructions were written and tested for Mac OS X.
 
 ##Deployment
 
