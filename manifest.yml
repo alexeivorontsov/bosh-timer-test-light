@@ -1,6 +1,6 @@
 ---
 name: my-new-timer-deployment
-director_uuid: 238e1b09-f66d-4432-9101-fd0d03efaed3
+director_uuid: REPLACE_THIS_TEXT_WITH_YOUR_DIRECTOR_UUID
 
 releases:
 - {name: my-new-timer-release, version: latest}
