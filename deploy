@@ -1,0 +1,7 @@
+#!/bin/bash
+
+bosh deployment manifest.yml 
+bosh add blob ./local_blobs/golang/go1.5.2.linux-amd64.tar.gz golang
+bosh create release —force
+bosh upload release
+bosh deploy

@@ -1,0 +1,8 @@
+---
+name: my_timer
+
+dependencies:
+- golang
+
+files:
+- my_timer/**/*.go

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf .blobs/ .dev_builds/ .final_builds/ blobs/golang/ dev_releases/
+bosh delete deployment my-new-timer-deployment --force
+bosh delete release my-new-timer-release --force
+

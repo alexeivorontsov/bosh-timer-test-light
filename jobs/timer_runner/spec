@@ -1,0 +1,8 @@
+---
+name: timer_runner
+templates:
+  ctl: bin/ctl
+
+packages:
+- golang
+- my_timer

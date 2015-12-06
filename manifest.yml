@@ -1,0 +1,50 @@
+---
+name: my-new-timer-deployment
+director_uuid: 238e1b09-f66d-4432-9101-fd0d03efaed3
+
+releases:
+- {name: my-new-timer-release, version: latest}
+
+networks:
+- name: default
+  subnets:
+  - range: 10.244.0.0/28
+    reserved: [10.244.0.1]
+    static: [10.244.0.3,10.244.0.6,10.244.0.10]
+    cloud_properties:
+      name: random
+
+resource_pools:
+- name: default
+  stemcell:
+    name: bosh-warden-boshlite-ubuntu-trusty-go_agent
+    version: latest
+  network: default
+  cloud_properties: {}
+
+compilation:
+  workers: 2
+  network: default
+  cloud_properties: {}
+
+update:
+  canaries: 1
+  canary_watch_time: 10000
+  update_watch_time: 10000
+  max_in_flight: 2
+
+properties:
+  goroot: /var/vcap/packages/golang
+  timer_exe_name: /var/vcap/packages/my_timer/bin/my_timer_runner
+
+jobs:
+- name: timer_runner
+  templates:
+  - name: timer_runner
+  instances: 1
+  resource_pool: default
+  networks:
+  - name: default
+    static_ips:
+    - 10.244.0.3
+  properties: {bin_name: my_timer_runner}
