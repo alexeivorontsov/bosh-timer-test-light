@@ -2,7 +2,7 @@ This assumes that you have bosh Director deployed locally and it is managing a l
 
 ##Deployment
 
-Step 1. Make a local working directory and change it to be you current working dir
+**Step 1.** Make a local working directory and change it to be you current working dir
 
     mkdir bosh-test
     cd bosh-test
