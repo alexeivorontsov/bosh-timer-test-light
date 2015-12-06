@@ -33,12 +33,12 @@ This assumes that you have bosh Director deployed locally and it is managing a l
     bosh add blob /tmp/golang-blobs/go1.5.2.linux-amd64.tar.gz golang
     bosh blobs
     
-**Step 7.** Create a new release
+**Step 7.** Create a new release (accept default release name when prompted)
 
     bosh create release --force
 
 
-**Step 8.** Upload the new release to bosh (accept default release name when prompted)
+**Step 8.** Upload the new release to bosh
 
     bosh upload release    
     bosh releases
