@@ -1,20 +1,5 @@
 # abort script on any command that exits with a non zero value
 set -e
 
-#echo "Current dir is " $PWD
-#echo "Current user is " $USER
-#echo "Installation target is " ${BOSH_INSTALL_TARGET}
-#ls -l
-#mkdir ${BOSH_INSTALL_TARGET}/1
-#cp -R golang/* ${BOSH_INSTALL_TARGET}
-#mkdir ${BOSH_INSTALL_TARGET}/2
-#cd ${BOSH_INSTALL_TARGET}
-#echo $PWD
-#ls -l
-#mkdir ${BOSH_INSTALL_TARGET}/3
-#tar zxv golang/go1.5.2.linux-amd64.tar.gz
-#mkdir ${BOSH_INSTALL_TARGET}/4
-
-
 tar xzf golang/go1.5.2.linux-amd64.tar.gz
 cp -R go/* ${BOSH_INSTALL_TARGET}
