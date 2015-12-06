@@ -1,4 +1,4 @@
-This assumes that you have bosh Director deployed locally and it is managing a local bosh installation. This instructions were written and tested for Mac OS X.
+This assumes that you have bosh Director deployed locally and it is managing a local bosh installation. These instructions were written and tested for Mac OS X.
 
 ##Deployment
 
@@ -11,9 +11,9 @@ Step 2. Clone this repository
 
     git clone https://github.com/alexeivorontsov/bosh-timer-test-light.git
     
-Step 3. Adjust bosh Director UUID to reflect your local deployment. First find out your local director UUID and copy it to the clipboard. Run this command
+Step 3. Set you bosh Director UUID in the deployment manifest file. You can do that manually with a text editor or you can run this command to accomplish that
 
-    bosh status --uuid|pbcopy
+    sed -i '' "s|REPLACE_THIS_TEXT_WITH_YOUR_DIRECTOR_UUID|$(bosh status --uuid)|" manifest.yml
 
 Open the deployment manifest file (manifest.yml) and change the following line (line 3)
 
