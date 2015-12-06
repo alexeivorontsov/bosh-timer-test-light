@@ -10,6 +10,7 @@ This assumes that you have bosh Director deployed locally and it is managing a l
 **Step 2.** Clone this repository
 
     git clone https://github.com/alexeivorontsov/bosh-timer-test-light.git
+    cd bosh-timer-test-light
     
 **Step 3.** Set your bosh Director UUID in the deployment manifest file. You can do that manually with a text editor (line 3 of the manifest.yml file) or you can run this command to accomplish that
 
@@ -17,7 +18,6 @@ This assumes that you have bosh Director deployed locally and it is managing a l
 
 **Step 4.** Point bosh director to the cloned deployment manifest file
 
-    cd bosh-timer-test-light
     ls -la
     bosh deployment manifest.yml
     bosh status
